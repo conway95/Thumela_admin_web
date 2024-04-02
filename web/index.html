@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="This is a web portal">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="admin_web">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <title>admin_web</title>
+  <link rel="manifest" href="manifest.json">
+
+  <script>
+    // The value below is injected by flutter build, do not touch.
+    const serviceWorkerVersion = null;
+  </script>
+  <!-- This script adds the flutter initialization JS code -->
+  <script src="flutter.js" defer></script>
+</head>
+<body>
+  <script>
+    window.addEventListener('load', function(ev) {
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+          });
+        }
+      });
+    });
+  </script>
+  <script src= "https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src= "https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src= "https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src= "https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+  <script src= "main.dart.js" type="application/javascript"></script>
+
+  <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyCAc-kEqQ-lj0YkSR8JvM6aQdjAm97yP6c",
+    authDomain: "thumela-version-2.firebaseapp.com",
+    projectId: "thumela-version-2",
+    storageBucket: "thumela-version-2.appspot.com",
+    messagingSenderId: "664543025337",
+    appId: "1:664543025337:web:4c06a92428192e97f9e368",
+    measurementId: "G-46MLC4X35T"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  //const analytics = getAnalytics(app);
+</script>
+
+</body>
+</html>
